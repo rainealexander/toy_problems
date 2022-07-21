@@ -12,31 +12,10 @@
  */
 let mergeTwoLists = function (list1, list2) {
   const head = {};
-  Object.assign(head, list1);
   let current = head;
-  let node1 = list1.next;
-  let node2 = list2;
-  while (node1 !== null && node2 !== null) {
-    if (node1 !== null && node2 !== null && node1.val <= node2.val) {
-      current.next = node1;
-      node1 = node1.next;
-      console.log('add node 1');
-    } else if (node2 !== null && current.val <= node2.val) {
-      current.next = node2;
-      node2 = node2.next;
-      console.log('add node 2');
-    } else if (node1 !== null && current.val <= node1.val) {
-      current.next = node1;
-      node1 = node1.next;
-      console.log('add node 1 extra');
-    } else if (node2 !== null && current.val <= node2.val) {
-      current.next = node2;
-      node2 = node2.next;
-      console.log('add node 2 extra');
-    }
-    current = current.next;
-    console.log('current: ', current);
-    console.log('result: ', head);
+  if (list1.va !== undefined && list2.value !== undefined ) {
+    list1.value <= list2.value ? head.value = list1.val
   }
+
   return head;
 };
